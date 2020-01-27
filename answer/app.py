@@ -5,10 +5,8 @@ import aiohttp_jinja2
 import aiopg.sa
 from aiohttp import web
 import jinja2
-
 from answer.routes import init_routes
 from answer.utils.common import init_config
-
 
 path = Path(__file__).parent
 

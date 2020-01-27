@@ -39,7 +39,7 @@ async def check_answer(request: web.Request):
 
     async with request.app.get('db').acquire() as conn:
         cursor = await conn.execute(
-            select().where(answer.c.id == answer_id)
+            answer.select().where(answer.c.id == answer_id)
         )
         answer_check_result = await cursor.fetchone()
 
